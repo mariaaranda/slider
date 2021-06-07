@@ -30,10 +30,10 @@ $(document).ready(function(){
     $(btnNext).click(siguiente);
     $(btnPrev).click(anterior);
 
-    // TEMPORIZADOR
-    // ref_interval = setInterval (function(){
-    //     siguiente ();
-    // },4000);
+    //TEMPORIZADOR
+    ref_interval = setInterval (function(){
+        siguiente ();
+    },4000);
 
     //FUNCIONES ------------------------------------
     
@@ -51,10 +51,10 @@ $(document).ready(function(){
     
     function siguiente () {
 
-        // clearInterval(ref_interval);
-        // ref_interval = setInterval (function(){
-        //     siguiente ();
-        // },4000);
+        clearInterval(ref_interval);
+        ref_interval = setInterval (function(){
+            siguiente ();
+        },4000);
 
         if (posicionSlide >= listaSlides){
             posicionSlide = 1;
